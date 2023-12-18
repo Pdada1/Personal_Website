@@ -6,4 +6,9 @@ const typed = new Typed(".typed-text", {
   onComplete: (self) => { self.cursor.remove() }
 })
 
+function swirlImgs()
+{
+  
+}
+
 
