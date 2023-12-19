@@ -263,11 +263,19 @@ Still needs some work to be beautiful
     flex-wrap: wrap;
 }
 
-.photogallery img{   
-    width: 20vw;
-    height: 45%;
+.photogallery img{  
+    width: 20vw; 
     margin: 1vw;
     aspect-ratio: 1/1;
+}
+.photogallery1 
+{
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.photogallery2
+{
+    clip-path: polygon(25% 43.30127019%, 19.38137822% 99.102%, -41.85% 124.1%, -97.47% 93.301%, -91.85% 37.5%, -30.61% 12.5%);
 }
 
 
