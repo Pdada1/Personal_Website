@@ -251,24 +251,43 @@ Still needs some work to be beautiful
     display: flex;
     justify-content: center;
     align-items: start;
-}
-.photogallery{
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-    padding-left: 4vw;
-    flex-wrap: wrap;
+    margin-bottom: 10vh;
 }
 
-.photogallery img{  
+.photographyouter {
+    display:flex;
+    --s: 20vw;  /* size  */
+    --m: 4px;    /* margin */
+    --f: calc(var(--s) * 1.732 + 4 * var(--m) - 1px); 
+  }
+  
+  .photogallery {
+    font-size: 0; 
+    padding-left: 10vh;
+  }
+  
+  .photogallery div {
+    width: var(--s);
+    margin: var(--m);
+    height: calc(var(--s) * 1.1547);
+    display: inline-block;
+    font-size: initial;
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+    margin-top: calc(var(--m) - var(--s) * 0.2886);;
+  }
+  
+   .photogallery::before {
+    content: "";
+    width: calc(var(--s) / 2 + var(--m));
+    float: left;
+    height: 120%; 
+    shape-outside: repeating-linear-gradient(#0000 0 calc(var(--f) - 3px), #000 0 var(--f));
+  } 
+
+  .photogallery img{
     width: 20vw; 
-    margin: 0 0.5vw;
-    aspect-ratio: 1/1;
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-}
+    height: 23vw;
+} 
 
 .mptitle {
     font-size: 40px;
