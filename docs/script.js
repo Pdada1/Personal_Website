@@ -6,6 +6,14 @@ const typed = new Typed(".typed-text", {
   onComplete: (self) => { self.cursor.remove() }
 })
 
+document.onmousemove = (event) => {
+  const {
+    clientX: x,
+    clientY: y
+  } = event
+  console.log(x, y)
+  }
+  
 function swirlImgs()
 {
   
